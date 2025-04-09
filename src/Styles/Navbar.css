@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+  overflow-y: scroll;
+  /* scrollbar-color: rgba(0, 0, 0, 0.5) transparent; */
+ */
+
+/* Customize scrollbar for better smooth scrolling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.primary-menu {
+  display: flex;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  height: 100px;
+  max-width: 100vw !important;   
+  width: 100vw !important;      /* Add this for maximum width */
+  z-index: 1000;
+  transition: top 0.3s, background-color 0.3s ease-in-out;
+  position: static;
+  animation: fadeIn 1s ease-out forwards;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;    /* Include padding in width calculation */
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@keyframes slideDown {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes borderSplit {
+  0% {
+    width: 0;
+    left: 50%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.primary-menu::before,
+.primary-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 0.5px;
+  background-color: rgb(163, 163, 163);
+  width: 0;
+  opacity: 0;
+  animation-delay: 2.1s;
+}
+
+.primary-menu::before {
+  left: 100%;
+  animation: borderSplit  1.5s ease-out forwards;
+  animation-delay: 2.1s;
+}
+
+.primary-menu::after {
+  right: 100%;
+  animation: borderSplit  1.5s ease-out forwards;
+  animation-delay: 2.1s;
+}
+
+@keyframes splitAnimation {
+  0% {
+    width: 0;
+    left: 50%;
+    opacity: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes merge {
+  0% {
+    border-top: 2px solid transparent;
+  }
+  50% {
+    /* border-top: 5px solid #fcfcfc; */
+    box-shadow: -5px -5px 15px  rgb(254, 254, 254) ;
+  }
+  100% {
+    border-top: 2px solid transparent;
+    box-shadow: none;
+  }
+}
+
+@keyframes splitAnimation {
+  0% {
+    width: 0;
+    left: 50%;
+    opacity: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+
+
+#logoHeader {
+  padding-right: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  padding-left: 30px;
+}
+#logoHeader img{
+  
+            background-blend-mode: overlay; 
+            background-size: cover; 
+            background-position: center; 
+            filter: grayscale(100%);
+}
+
+.menu-container {
+  border: #ffffff;
+}
+
+.one-page-menu {
+  align-items: center;
+}
+
+.menu-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  justify-content: center; /* Centers the menu items horizontally within the container */
+  flex-grow: 1; /* Allows the menu to take up available space and center properly */
+}
+
+.menu-item {
+  padding: 14px 18px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-link {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.menu-link:hover {
+  color: #ffffff;
+}
+
+.tile {
+  display: inline-flex;
+}
+
+.tile-text {
+  display: inline-flex;
+}
+
+.Login-button {
+  border: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fad643;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Login-button:hover span {
+  display: inline-block;
+  color: #ff9a00;
+}
+
+/* New CSS added below */
+.link-116 {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-116::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #fdd40e;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.link-116:hover::after {
+  background-color: #fdd40e;
+  width: 100%;
+  animation: heartbeat116 .5s ;
+}
+
+@keyframes heartbeat116 {
+  0%{
+    width: 0%;
+    background-color: #fdd40e;
+
+  }
+  
+ 
+   100% {
+    
+    width: 100%;
+    background-color: #fdd40e;
+  }
+}
+@media (max-width: 768px) {
+  .primary-menu {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .menu-item {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .Login-button {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  #logoHeader {
+    margin: 0 auto;
+    padding: 10px;
+  }
+}

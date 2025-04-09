@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+    
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+@keyframes dropdown {
+    0% {
+        transform-origin: 0% 0%;
+        transform: scale(1, 0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    10% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1, 1);
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+#scroll-down {
+    display: inline-block;
+    position: relative;
+    padding-top: 10px;
+    text-align: center;
+    animation: fadeDown 1.5s infinite;
+}
+
+#scroll-down::before {
+    content: ' ';
+    position: absolute;
+    margin-left: -12px;
+    width: 1px;
+    height: 254px;
+    background: #fcfcfc;
+    animation: dropdown 3s infinite ease-in;
+}

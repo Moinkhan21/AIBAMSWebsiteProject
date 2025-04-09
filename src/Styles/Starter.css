@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    background-color: black;
+}
+/* Base smooth scrolling for all devices */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /* Improves scroll on iOS */
+  }
+  
+  /* Optimized scrolling for different devices */
+  @media screen and (max-width: 767px) {
+    html {
+      scroll-padding-top: 60px; /* Adjust for fixed headers on mobile */
+    }
+    
+    body {
+      scroll-snap-type: y proximity; /* Light snap effect for mobile */
+    }
+    
+    .logo-container-main {
+      scroll-snap-align: start; /* Elements to snap to */
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    html {
+      scroll-padding-top: 80px;
+    }
+    
+    /* Improved animation performance for mid-size devices */
+    .shooting-line, .arrow-down {
+      will-change: transform;
+      transform: translateZ(0);
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    html {
+      scroll-padding-top: 100px;
+    }
+    
+    /* Enhanced smooth scrolling for desktops */
+    body {
+      scroll-snap-type: y proximity;
+    }
+    
+    .logo-container-main {
+      scroll-snap-align: start;
+    }
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    body {
+      scroll-snap-type: none;
+    }
+  }
+  
+  /* Additional performance optimizations */
+  nav, .logo-container-main {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Improved animation for auto-scrolling */
+  @keyframes smoothScroll {
+    0% { opacity: 0.95; }
+    100% { opacity: 1; }
+  }
+  
+  html.scrolling {
+    animation: smoothScroll 0.6s ease-in-out;
+  }
+
+/* 🔹 Logo */
+.logo-main {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-family: "Montserrat", serif;
+  background-image: url("../assets/131973-751915246_small.gif");
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: easeIn 3s;
+}
+
+@media (min-width: 768px) {
+    .logo-main { font-size: 8rem; letter-spacing: 20px; }
+}
+
+.logo-container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 99.9vh;
+  width: 100vw;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* 🚀 Shooting Star Animation (Perfect Timing) */
+.shooting-line-wrapper {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 255px;
+    overflow: hidden;
+}
+
+/* .shooting-line {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    width: 3px;
+    height: 180px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0));
+    animation: shootingStar 2s ease-in-out forwards;
+}
+
+@keyframes shootingStar {
+    0% { transform: translateY(-150px) scaleY(0); opacity: 1; }
+    30% { transform: translateY(30px) scaleY(0.5); opacity: 1; }
+    60% { transform: translateY(100px) scaleY(1); opacity: 0.8; }
+    100% { transform: translateY(220px) scaleY(1.5); opacity: 0; }
+} */
+
+
+
+.shooting-line {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    width: 3px;
+    height: 180px;
+    background: linear-gradient(white, rgb(255, 255, 255));
+    /* animation: shootingStar 2s linear forwards; */
+}
+
+@keyframes shootingStar {
+    0% { transform: translateY(-150px) scaleY(0); opacity: 1; }
+    30% { transform: translateY(30px) scaleY(0.5); opacity: 1; }
+    60% { transform: translateY(100px) scaleY(1); opacity: 1; }
+    100% { transform: translateY(220px) scaleY(0.5); opacity: 0; }
+}
+.starter-end {
+  height: 20px; /* Ensure visibility and height for scrolling */
+  margin-top: 20px; /* Add spacing to clearly mark the end */
+  background: transparent; /* Optional: Keep it invisible but present */
+}
+
+

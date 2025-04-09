@@ -1,0 +1,73 @@
+:root {
+  /* Primary Colors */
+  --primary-accent: #00FFD1;     /* Bright turquoise accent */
+  --primary-dark: #0A0A0A;       /* Main dark background */
+  --primary-darker: #000000;     /* Darker elements */
+  
+  /* Secondary Colors */
+  --secondary-accent: #6E3AFF;   /* Purple accent */
+  --secondary-glow: #2A2A2A;     /* Subtle glow effect */
+  
+  /* UI Colors */
+  --text-primary: #FFFFFF;       /* Primary text */
+  --text-secondary: #A0A0A0;     /* Secondary text */
+  --surface-dark: #121212;       /* Card/surface background */
+  --border-glow: rgba(0, 255, 209, 0.15); /* Glowing border effect */
+}
+
+/* Ensure the parent container takes full width and height */
+.fusionsuite-container {
+    width: 100vw;          /* Full viewport width */
+    min-height: 100vh;     /* Full viewport height */
+    
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensures padding/margins don't add extra width */
+    background-color: whi;
+    color: var(--text-primary);
+}
+
+/* Style the GridProducts component to take full width */
+.grid-products-container {
+    width: 100%;           /* Take the full width of the parent */
+    display: flex;
+    justify-content: center; /* Center the grid items if desired */
+    align-items: center;
+    flex: 1;               /* Grow to fill available space */
+    background-color: var(--surface-dark);
+}
+
+/* Card styling */
+.product-card {
+    background: var(--surface-dark);
+    border: 1px solid var(--border-glow);
+    box-shadow: 0 0 20px var(--border-glow);
+    color: var(--text-primary);
+}
+
+/* Accent elements */
+.accent-text {
+    color: var(--primary-accent);
+}
+
+.accent-border {
+    border-color: var(--primary-accent);
+}
+
+/* Interactive elements */
+.button-primary {
+    background-color: var(--primary-accent);
+    color: var(--primary-darker);
+    transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: var(--secondary-accent);
+    box-shadow: 0 0 15px var(--border-glow);
+}
+
+/* Secondary elements */
+.secondary-text {
+    color: var(--text-secondary);
+}
+

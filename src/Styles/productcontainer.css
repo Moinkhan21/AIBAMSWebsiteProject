@@ -1,0 +1,84 @@
+/* Mondrian.css */
+@keyframes expand-cell {
+    0% {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+    50% {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    100% {
+      grid-column: span 3;
+      grid-row: span 3;
+    }
+  }
+  
+  .mondrian-grid {
+    display: grid;
+    gap: 2vmin;
+    padding: 2vmin;
+    grid-template-columns: 17vmin 8vmin 5vmin 7vmin;
+    grid-template-rows: 4vmin 9vmin 15vmin 7vmin;
+    align-items: stretch;
+    justify-items: stretch;
+    background: #333;
+  }
+  
+  .cell {
+    width: 100%;
+    background: rgb(0 0 0);
+    --light1: #e5eeeb;
+    --light2: #f2e7d5;
+    --yellow1: #f2c968;
+    --yellow2: #edcc6b;
+    --red1: #d62d24;
+    --blue: #241785;
+    cursor: pointer;
+  }
+  
+  .cell.expanded {
+    animation: expand-cell 1s ease-in-out forwards;
+  }
+  
+  .cell:not(.expanded) {
+    animation: none;
+  }
+  
+  .cell-red {
+    background: var(--red1);
+  }
+  
+  .cell-light-wide {
+    grid-column: span 2;
+    background: var(--light2);
+  }
+  
+  .cell-yellow {
+    background: var(--yellow1);
+  }
+  
+  .cell-blue-tall {
+    grid-row: span 2;
+    background: var(--blue);
+  }
+  
+  .cell-light {
+    background: var(--light1);
+  }
+  
+  .cell-yellow-wide {
+    grid-column: span 2;
+    background: var(--yellow2);
+  }
+  
+  .cell-light2 {
+    background: var(--light2);
+  }
+  
+  .cell-light-tall {
+    grid-row: span 2;
+    background: var(--light1);
+  }
+  
+ 

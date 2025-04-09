@@ -1,0 +1,27 @@
+.icon-container {
+    will-change: transform, filter, opacity;
+    opacity: 0.3; 
+    transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1), filter 4s ease-out, opacity 4s ease-out;
+  }
+  
+  /* Initial states for each icon */
+  .adp-icon { transform: perspective(500px) scale(6) translateX(-800px) translateY(-400px) rotateX(30deg) rotateY(15deg); filter: blur(20px); }
+  .personio-icon { transform: perspective(500px) scale(6) translateX(800px) translateY(-400px) rotateX(-30deg) rotateY(-15deg); filter: blur(20px); }
+  .teams-icon { transform: perspective(500px) scale(6) translateX(600px) translateY(-400px) rotateX(25deg) rotateY(20deg); filter: blur(20px); }
+  .slack-icon { transform: perspective(500px) scale(6) translateX(0px) translateY(-400px) rotateX(-25deg) rotateY(-20deg); filter: blur(20px); }
+  .jira-icon { transform: perspective(500px) scale(6) translateX(-800px) translateY(-800px) rotateX(35deg) rotateY(25deg); filter: blur(20px); }
+  .google-icon { transform: perspective(500px) scale(6) translateX(-1000px) translateY(-400px) rotateX(-30deg) rotateY(-15deg); filter: blur(20px); }
+  .gusto-icon { transform: perspective(500px) scale(6) translateX(800px) translateY(-600px) rotateX(25deg) rotateY(20deg); filter: blur(20px); }
+  .greenhouse-icon { transform: perspective(500px) scale(6) translateX(600px) translateY(-800px) rotateX(35deg) rotateY(25deg); filter: blur(20px); }
+  .loading-icon { transform: perspective(500px) scale(6) translateX(-600px) translateY(-50px) rotateX(-35deg) rotateY(-25deg); filter: blur(20px); }
+  .user-smile-icon { transform: perspective(500px) scale(6) translateX(1000px) translateY(-400px) rotateX(-25deg) rotateY(-20deg); filter: blur(20px); }
+  .salesforce-icon { transform: perspective(500px) scale(6) translateX(-1200px) translateY(-400px) rotateX(-30deg) rotateY(-15deg); filter: blur(20px); }
+  .hubspot-icon { transform: perspective(500px) scale(6) translateX(100px) translateY(-400px) rotateX(30deg) rotateY(15deg); filter: blur(20px); }
+  .workday-icon { transform: perspective(500px) scale(6) translateX(1000px) translateY(-400px) rotateX(25deg) rotateY(20deg); filter: blur(20px); }
+  
+  /* Final state when animated */
+  .icon-container.animate-in {
+    transform: perspective(500px) scale(1) translateX(0px) translateY(0px) rotateX(0deg) rotateY(0deg);
+    filter: blur(0px);
+    opacity: 1; /* Slowly become visible */
+  }

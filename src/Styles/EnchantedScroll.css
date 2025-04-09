@@ -1,0 +1,202 @@
+/* EnchantedScroll.css */
+@property --scroll-y-position {
+    syntax: "<percentage>";
+    initial-value: -10%;
+    inherits: false;
+  }
+  @property --reflection-y-position {
+    syntax: "<percentage>";
+    initial-value: -50%;
+    inherits: false;
+  }
+  @property --scrollbar-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: transparent;
+  }
+  @property --opacity-1 { syntax: "<number>"; inherits: false; initial-value: 0.1; }
+  @property --opacity-2 { syntax: "<number>"; inherits: false; initial-value: 0.1; }
+  @property --opacity-3 { syntax: "<number>"; inherits: false; initial-value: 0.1; }
+  @property --text-offset-1 { syntax: "<number>"; inherits: false; initial-value: 10; }
+  @property --text-offset-2 { syntax: "<number>"; inherits: false; initial-value: 10; }
+  @property --text-offset-3 { syntax: "<number>"; inherits: false; initial-value: 10; }
+  
+  .enchanted-section {
+    margin: 0;
+    background: black;
+    height: 900px;
+    position: relative;
+    /* Remove overflow-y: auto to prevent separate scrolling */
+  }
+  
+  .enchanted-section .scrollbar {
+    width: 4px;
+    height: 200%;
+    
+    background-color: var(--scrollbar-color);
+    background-image: radial-gradient(
+      circle at 0% var(--scroll-y-position),
+      rgb(112, 153, 255) 0%,
+      rgba(56, 106, 249, 0.79135) 10px,
+      rgba(10, 76, 242, 0.53) 20px,
+      rgba(255, 255, 255, 0) 40px,
+      rgba(49, 49, 49, 0) 100%
+    );
+    animation: on-scrolling both linear;
+    /* Change to view() timeline instead of scroll() */
+    animation-timeline: view();
+    animation-range: entry 0% cover 100%;
+  }
+  
+  .enchanted-section .containerModified {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      132deg,
+      rgba(50, 50, 50, 0.09) 0%,
+      rgba(238, 238, 238, 0.03) 20%,
+      rgba(202, 202, 202, 0.04) 70%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
+    margin-left: 5px;
+    position: relative;
+  }
+  
+  .enchanted-section .containerModified::before,
+  .enchanted-section .containerModified::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(
+      180deg,
+      rgba(10, 76, 242, 0) 0%,
+      rgba(10, 76, 242, 0.75203) 38.288288288288285%,
+      rgb(77, 127, 255) 50.9132179054054%,
+      rgba(10, 76, 242, 0.75248) 63.06306306306306%,
+      rgba(10, 76, 242, 0) 100%
+    ); */
+    background-repeat: no-repeat;
+    background-position-y: var(--reflection-y-position);
+    animation: on-scrolling both linear;
+    /* Change to view() timeline instead of scroll() */
+    animation-timeline: view();
+    animation-range: entry 0% cover 150%;
+  }
+  
+  .enchanted-section .containerModified::before {
+    background-size: 1px 150px;
+  }
+  
+  .enchanted-section .containerModified::after {
+    background-size: 10px 150px;
+    filter: blur(10px);
+  }
+  
+  .enchanted-section main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40vh 0;
+    /* Remove margin-top and adjust padding for better positioning */
+  }
+  
+  .enchanted-section p {
+    background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.9) 90%,
+      rgb(191, 209, 255) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 25px;
+    line-height: 1.5em;
+    animation: on-scrolling both linear;
+    /* Change to view() timeline instead of scroll() */
+    animation-timeline: view();
+    animation-range: entry 10% cover 60%;
+  }
+  
+  .enchanted-section .paragraph-1 {
+    font-size: 48px;
+    opacity: var(--opacity-1);
+    transform: translateY(calc(var(--text-offset-1) * 1px));
+  }
+  
+  .enchanted-section .paragraph-2 {
+    font-size: 48px;
+    opacity: var(--opacity-2);
+    transform: translateY(calc(var(--text-offset-2) * 1px));
+  }
+  
+  .enchanted-section .paragraph-3 {
+    font-size: 48px;
+    opacity: var(--opacity-3);
+    transform: translateY(calc(var(--text-offset-3) * 1px));
+  }
+  
+  .enchanted-wrapper {
+    height: auto;
+    /* Remove overflow-y: hidden to allow scrolling with the page */
+  }
+  
+  @keyframes on-scrolling {
+    0% {
+      --scroll-y-position: -10%;
+      --reflection-y-position: -22%;
+      --scrollbar-color: transparent;
+      --opacity-1: 0.1;
+      --opacity-2: 0.1;
+      --opacity-3: 0.1;
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+    }
+    1% {
+      --scrollbar-color: rgba(255, 255, 255, 0.1);
+    }
+    25% {
+      --opacity-1: 1;
+      --opacity-2: 0.1;
+      --opacity-3: 0.1;
+      --text-offset-1: 0;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+    }
+    50% {
+      --scroll-y-position: 50%;
+      --reflection-y-position: 50%;
+      --opacity-1: 1;
+      --opacity-2: 1;
+      --opacity-3: 0.1;
+      --text-offset-1: 10;
+      --text-offset-2: 0;
+      --text-offset-3: 10;
+    }
+    60% {
+      --opacity-1: 1;
+      --opacity-2: 1;
+      --opacity-3: 1;
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 0;
+    }
+    100% {
+      --scroll-y-position: 105%;
+      --reflection-y-position: 115%;
+      --scrollbar-color: rgba(255, 255, 255, 0.1);
+      --opacity-1: 1;
+      --opacity-2: 1;
+      --opacity-3: 1;
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+    }
+  }

@@ -1,0 +1,10 @@
+.background-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black; // Ensures pitch black background
+    filter: blur(50px);
+  }
+  

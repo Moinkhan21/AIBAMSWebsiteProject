@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+
+
+
+
+
+
+.text-color {
+  color: #79ff00;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.tag-line {
+
+  display: flex;
+  flex-direction: column;
+  color: rgb(189, 189, 189);
+  
+}
+
+.tag-line p {
+  font-size: 30px;
+}
+
+.glow-text {
+  color: #79ff00;
+  text-shadow: 0 0 10px rgba(121, 255, 0, 0.8),  
+               0 0 20px rgba(121, 255, 0, 0.6), 
+               0 0 30px rgba(121, 255, 0, 0.4);
+}
+
+.vidtemp{
+  /* box-shadow: inset 0 0 30px rgba(255, 0, 255, 0.4), inset 0 0 50px rgba(0, 255, 255, 0.3); */
+
+}
+
+
+.motto {
+  background-color: #79ff00;
+  color: black;
+  font-size: 35px;
+
+  font-weight: 600;
+}
+
+.motto:hover {
+  color: transparent; 
+  -webkit-text-stroke: 1px black;
+}
+
+.specialCase {
+  color: #79ff00;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .tag-line p {
+    font-size: 28px;
+  }
+
+  .main-title,
+  .tag-line {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tag-line p {
+    font-size: 24px;
+  }
+
+  .main-title {
+    margin-top: 2rem;
+  }
+
+  .glow-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tag-line p {
+    font-size: 20px;
+  }
+
+  .main-title {
+    margin-top: 1rem;
+  }
+
+  .glow-text {
+    font-size: 18px;
+  }
+}
+
+
+.firetext{
+  font-size: 5rem;
+  font-weight: 700;
+  
+  background-image: url(../assets/giphy.gif);
+  background-size: cover;
+  
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

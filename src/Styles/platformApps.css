@@ -1,0 +1,42 @@
+.circles {
+    height: 90vmin;
+    position: absolute;
+    width: 90vmin;
+    
+    
+    > div {
+      animation: growAndFade 5s infinite ease-out;
+      background-color: #ffee02;
+      /* Keep border-radius for smoothness, but clip to semicircle */
+      border-radius: 50%;
+      height: 100%;
+      opacity: 1;
+      position: absolute;
+      width: 125%;
+      /* Clip to show only the top half of the circle */
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    
+    .circle1 {
+      animation-delay: 1s;    
+    }
+    .circle2 {
+      animation-delay: 2.5s; 
+    }
+    .circle3 {
+      animation-delay: 4s;
+    }
+  }
+  
+  @keyframes growAndFade {
+    0% {
+      opacity: 0.25;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
+ 

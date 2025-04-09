@@ -1,0 +1,224 @@
+.pricing-container {
+    width: 100vw; /* Full viewport width */
+    max-width: 100%; /* Ensures it doesn't shrink */
+    /* background: linear-gradient( #000000 ,#000000,  #0015ff2a,#000000, #000000); */
+    background-color: transparent;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+  }
+  
+  .pricing-container > div {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Glass effect for tables */
+  .pricing-container table {
+    position: relative;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 3rem;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  .pricing-container table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pricing-container th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+  
+  .pricing-container td, .pricing-container th {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pricing-container tbody tr:hover td {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .pricing-container tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Special styling for feature checkmarks */
+  .pricing-container .text-pink-500 {
+    color: #ffffff; /* Changed to match the hover color */
+    font-size: 1.1rem;
+    /* text-shadow: 0 0 10px rgba(15, 23, 239, 0.5); */
+  }
+  
+  /* Feature row styling */
+  .pricing-container tbody tr td:first-child {
+    font-weight: 500;
+  }
+  
+  /* Section headers styling */
+  .pricing-container h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pricing cards styling with glass effect */
+  .pricing-container .grid > div {
+    position: relative;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.5s, box-shadow 0.5s;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .pricing-container .grid > div:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.2);
+    /* background: linear-gradient(135deg, rgba(15, 37, 239, 0.71), rgba(13, 13, 220, 0.194)); */
+    border: 4px solid rgb(15, 52, 239);
+  }
+  
+  /* Plan name styling */
+  .pricing-container .grid h3 {
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Price styling */
+  .pricing-container .grid .text-3xl {
+    color: white;
+    font-weight: 700;
+  }
+  
+  .pricing-container .grid .text-gray-500 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Enhanced toggle button styling */
+  .pricing-container .flex.justify-center.mt-6.space-x-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .pricing-container .flex.justify-center.mt-6.space-x-2 button {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+  
+  /* Inactive button styling */
+  .pricing-container .flex.justify-center.mt-6.space-x-2 button.bg-gray-200 {
+    background: rgb(0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  }
+  
+  .pricing-container .flex.justify-center.mt-6.space-x-2 button.bg-gray-200:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  
+ 
+  
+  /* Button click effect (scale down slightly) */
+  .pricing-container .flex.justify-center.mt-6.space-x-2 button:active {
+    transform: scale(0.97);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* "Get started" buttons */
+  .pricing-container .grid button {
+    /* background-color: rgba(101, 239, 15, 0.3);
+    border: 1px solid rgba(101, 239, 15, 0.5); */
+    transition: all 0.3s ease;
+  }
+  
+  .pricing-container .grid button:hover {
+    background-color: rgba(19, 15, 239, 0.5);
+    box-shadow: 0 0 15px rgba(49, 15, 239, 0.4);
+  }
+  
+  /* Top header area styling */
+  .pricing-container h2.text-4xl {
+    color: white;
+    letter-spacing: -0.03em;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pricing-container p.text-gray-600 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Glow effect on hover for tables and cards */
+  .pricing-container table::after,
+  .pricing-container .grid > div::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(34, 15, 239, 0.2), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .pricing-container table:hover::after,
+  .pricing-container .grid > div:hover::after {
+    opacity: 1;
+  }
