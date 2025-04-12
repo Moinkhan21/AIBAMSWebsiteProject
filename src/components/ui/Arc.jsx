@@ -41,7 +41,7 @@ export default function PlatformArc() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-[600px] bg-transparent text-center p-6 mt-50">
+    <div className="relative flex flex-col items-center justify-center bg-transparent text-center p-6 mt-50 aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-21 lg:aspect-h-9">
       {/* Animated Background */}
       <div className="circles  mt-[250px]  self-center inset-0 flex items-center justify-center " data-aos="fade-in" style={{
         left: "50%",
@@ -80,10 +80,10 @@ export default function PlatformArc() {
       </div>
 
       {/* Text and Button */}
-      <div className="bg-[#ffd900e3] mt-32 uppercase text-[#ffffff] px-4 py-1 rounded-full text-sm font-semibold mb-4" data-aos="fade-up" data-aos-delay="200">
+      <div className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] mt-32 uppercase text-[#000] px-4 py-1 rounded-full text-sm font-semibold mb-4" data-aos="fade-up" data-aos-delay="200">
         ai enabled
       </div>
-      <h1 className="ml-5 text-4xl font-bold text-white max-w-xl mr-2" data-aos="fade-up" data-aos-delay="400">
+      <h1 className="ml-5 font-semibold text-white mr-2 sm:text-xl md:text-xl lg:text-2xl" data-aos="fade-up" data-aos-delay="400">
         All operations for your business, simplified
       </h1>
       <div className="mt-10" data-aos="fade-up" data-aos-delay="600">

@@ -18,13 +18,13 @@ function Footer({ heroRef }) {
   };
 
   return (
-    <footer className="bg-black text-white p-10 relative">
+    <footer className="bg-black text-white p-5 relative">
       
-      <div className="max-w-7xl mx-auto grid grid-cols-5 gap-8 justify-items-center">
+      <div className="max-w-7xl mx-auto grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
         {/* PRODUCT */}
         <div>
-          <h3 className="font-bold mb-2">PRODUCT</h3>
-          <ul className="space-y-2 text-white">
+          <h3 className="font-bold mb-2 sm:base md:text-lg lg:text-xl">PRODUCT</h3>
+          <ul className="space-y-2 text-white sm:small md:base lg:text-lg">
             {[
               { name: "Design", link: "#" },
               { name: "Page building", link: "#" },
@@ -49,8 +49,8 @@ function Footer({ heroRef }) {
 
         {/* SOLUTIONS - First Column */}
         <div>
-          <h3 className="font-bold mb-2">SOLUTIONS</h3>
-          <ul className="space-y-2 text-gray-400">
+          <h3 className="font-bold mb-2 sm:text-base md:text-lg lg:text-xl">SOLUTIONS</h3>
+          <ul className="space-y-2 text-gray-400 sm:text-small md:text-base lg:text-lg">
             {[
               { name: "Enterprise", link: "#" },
               { name: "Startups", link: "#" },
@@ -71,8 +71,8 @@ function Footer({ heroRef }) {
         
         {/* SOLUTIONS - Second Column */}
         <div>
-          <h3 className="font-bold mb-2">SOLUTIONS</h3>
-          <ul className="space-y-2 text-gray-400">
+          <h3 className="font-bold mb-2 sm:text-base md:text-lg lg:text-xl">SOLUTIONS</h3>
+          <ul className="space-y-2 text-gray-400 sm:text-small md:text-base lg:text-lg">
             {[
               { name: "Enterprise", link: "#" },
               { name: "Startups", link: "#" },
@@ -93,8 +93,8 @@ function Footer({ heroRef }) {
 
         {/* RESOURCES */}
         <div>
-          <h3 className="font-bold mb-2">RESOURCES</h3>
-          <ul className="space-y-2 text-gray-400">
+          <h3 className="font-bold mb-2 sm:text-base md:text-lg lg:text-xl">RESOURCES</h3>
+          <ul className="space-y-2 text-gray-400 sm:text-small md:text-base lg:text-lg">
             {[
               { name: "Blog", link: "#" },
               { name: "Customer stories", link: "#" },
@@ -117,8 +117,8 @@ function Footer({ heroRef }) {
 
         {/* COMPANY */}
         <div>
-          <h3 className="font-bold mb-2">COMPANY</h3>
-          <ul className="space-y-2 text-gray-400">
+          <h3 className="font-bold mb-2 sm:text-base md:text-lg lg:text-xl">COMPANY</h3>
+          <ul className="space-y-2 text-gray-400 sm:ext-small md:text-base lg:text-lg">
             {[
               { name: "About", link: "#" },
               { name: "Careers", link: "#" },
@@ -141,26 +141,26 @@ function Footer({ heroRef }) {
        
       <div className="statement flex-col justify-between space-y-5 text-center mx-5 mt-10">
         <p className="text-center text-3xl font-bold tracking-wider">AIBAMS <span className="ignite">IGNITE</span></p>
-        <p className="text-center font-light tracking-wide">
+        <p className="text-center font-light tracking-wide sm:text-base md:text-lg lg:text-xl">
           Get ready to ignite your business journey with AIBAMS, where 
           innovation and efficiency converge.
         </p>
-        <p className="text-center font-extralight tracking-wide">
+        <p className="text-center font-extralight tracking-wide sm:textbase md:text-lg lg:text-xl">
           Our AI solutions will revolutionize how you <span className="font-semibold">manage</span>, <span className="font-semibold">operate</span>, and <span className="font-semibold">succeed</span>.
         </p>
-        <p className="text-center font-semibold">Stay tuned for a new era in business excellence</p>
+        <p className="text-center font-semibold sm:text-base md:text-lg lg:text-xl">Stay tuned for a new era in business excellence</p>
       </div>
 
       {/* Bottom section */}
       <div className="mt-10 text-center">
-        <div className="mb-10">
+        <div className="mb-10 text-lg">
           <Social />
         </div>
-        <p className="text-gray-400 mb-5">
+        <p className="text-gray-400 mb-5 sm:text-sm md:text-base lg:text-lg">
           © 2025 All Rights Reserved by AIBAMS.
         </p>
 
-        <p className="text-gray-300 tracking-widest">
+        <p className="text-gray-300 tracking-widest sm:text-sm md:text-base lg:text-lg">
           MADE WITH <span className="text-red-500 text-xl">❤️</span> BY{" "}
           <span>SHDPIXEL</span>{" "}
           IN

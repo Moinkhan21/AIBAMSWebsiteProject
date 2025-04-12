@@ -12,6 +12,8 @@ import Contact from '../pages/Contact';
 import Careers from '../pages/Careers';
 import PrivacyPolicy from '../pages/policy';
 import Terms from '../pages/Terms'; // Assuming you have a Terms page component
+import TestPage from '../pages/tools/test'; // Assuming you have a Test page component
+
 
 const AppRoutes = () => {
   return (
@@ -24,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/careers" element={<MainLayout showBackground={true}><Careers /></MainLayout>} />
       <Route path="/aboutus" element={<MainLayout showBackground={true}><About /></MainLayout>} />
       <Route path="/terms" element={<MainLayout showBackground={false}><Terms /></MainLayout>} />
+      <Route path="/test" element={<TestPage></TestPage>} />
       <Route path="/policy" element={<MainLayout showBackground={false}><PrivacyPolicy /></MainLayout>} />
     </Routes>
   );

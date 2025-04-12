@@ -8,7 +8,7 @@ import Productcontainers from "../components/ui/Productcontainers.jsx";
 import CustomButton from "../components/Button.jsx";
 import ButtonHero from "../components/ui/herosectionButton.jsx";
 import { motion, useScroll, useTransform, AnimatePresence} from "framer-motion";
-import PuzzleGrid from "../components/ui/PuzzleGrid.jsx";
+
 
 
 
@@ -29,13 +29,13 @@ const Fusionsuite = () => {
       <Productcontainers data-aos="fade-up" />
 
       </div> */}
-      <PuzzleGrid />
+      
 
-        <section className="bg-transparent mt-60">
+        <section className="bg-transparent mt-10S">
           <div className="text-center p-20 font-bold tracking-widest line-height-100">
             <div className="flex justify-center items-center">
-              <p
-                className="text-[70px] md:text-5xl font-semibold text-white font-inter"
+              <h1
+                className="sm:text-xl md:text-xl lg:text-2xl font-semibold text-white font-inter"
                 data-aos="zoom-in"
               >
                 Experience the
@@ -47,7 +47,7 @@ const Fusionsuite = () => {
                   AI-Powered
                 </span>
                 Solutions
-              </p>
+              </h1>
             </div>
           </div>
           <div

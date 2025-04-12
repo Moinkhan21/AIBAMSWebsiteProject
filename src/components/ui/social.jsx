@@ -6,7 +6,7 @@ import {
   FaTwitter, 
   FaLinkedin, 
   FaYoutube,
-  FaTiktok,
+  // FaTiktok,
   FaArrowUp
 } from "react-icons/fa";
 
@@ -80,14 +80,14 @@ const Social = ({ headerRef }) => { // Accept headerRef as a prop
       >
         <FaYoutube size={24} />
       </a>
-      <a 
+      {/* <a 
         className="text-gray-400 hover:text-white transition-colors"
         href="https://tiktok.com" 
         target="_blank" 
         rel="noopener noreferrer"
       >
         <FaTiktok size={24} />
-      </a>
+      </a> */}
 
       
     </div>

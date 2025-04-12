@@ -12,6 +12,7 @@ import ToolsGrid from "../components/ui/newProduct.jsx";
 import VerticalScrollSection from "../components/ui/newStackingcards.jsx";
 import BackgroundDots from "../components/ui/constantbg.jsx";
 import Dashboard from "../components/ui/Windows8.jsx";
+import PuzzleGrid from "../components/ui/PuzzleGrid.jsx";
 
 // Custom easing function for ultra-smooth transition
 const smoothEase = (progress) => {
@@ -48,36 +49,36 @@ const Hero = forwardRef((props, ref) => {
   return (
     <>
       <div className="relative w-full min-h-screen">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 min-h-screen">
           <BackgroundDots />
         </div>
 
         <section
           ref={ref}
-          className="relative z-10 flex flex-col items-center text-center text-white pt-35"
+          className="relative z-10 flex flex-col items-center text-center text-white pt-25"
         >
           <motion.div
-            className="flex flex-row items-center font-semibold text-[94px] leading-tight tracking-wide"
+            className="flex flex-row items-center justify-center font-semibold tracking-wide sm:text-xl md:text-xl lg:text-2xl sm:mx-auto md:mx-auto lg:mx-auto"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="whitespace-nowrap">Beyond Just a Tool</span>
+            <h1 className="whitespace-nowrap">Beyond Just a Tool</h1>
           </motion.div>
 
-          <div className="absolute h-full -mt-20 ml-[80%] flex flex-col justify-end bg-primary-500 opacity-50 w-100 blur-2xl rounded-l-full"></div>
+          <div className="absolute h-full mt-20 ml-[80%] flex flex-col justify-end bg-primary-500 opacity-50 w-100 blur-2xl rounded-l-full"></div>
           <motion.div
-            className="pt-10 text-[27px] text-secondary-300"
+            className="pt-10 sm:text-2xl md:text-2xl lg:text-3xl text-secondary-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <p>
+            <h3>
               AIBAMS isn't just a tool—it's the next generation of business{" "}
               <br />
               solutions, integrating AI, automation, and analytics for <br />
               maximum efficiency.
-            </p>
+            </h3>
           </motion.div>
           <motion.div
             className="mt-20 flex justify-center gap-10"
@@ -109,7 +110,7 @@ const Hero = forwardRef((props, ref) => {
             </div>
           </motion.section>
 
-          <div className="-mt-60">
+          <div className="mt-60">
             <motion.div
               className="relative z-10"
               initial={{ opacity: 0 }}
@@ -121,6 +122,7 @@ const Hero = forwardRef((props, ref) => {
             </motion.div>
           </div>
 
+          <PuzzleGrid />
           <section className="relative z-10 product mt-25">
             <motion.div
               className="product-title text-2xl text-center"
@@ -153,14 +155,15 @@ const Hero = forwardRef((props, ref) => {
             </button>
           </div>
 
-          <section className="relative -z-10 text-3xl text-center mt-60 tracking-wider">
+          <section className="relative z-10 text-center mt-15 tracking-wider">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
+              className="sm:text-xl md:text-2xl lg:text-3xl"
             >
-              <span className="pl-10 font-bold text-secondary-400 pr-5">
+              <span className="pl-3 font-bold">
                 Web Builder{" "}
               </span>
               on
@@ -175,7 +178,7 @@ const Hero = forwardRef((props, ref) => {
               viewport={{ once: true }}
             >
               <div className="mt-1">
-                <button className="relative !text-xl overflow-hidden bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black font-bold py-3 px-6 rounded-full transition-all duration-200 ease-out hover:shadow-[0_0_25px_12px_rgba(255,255,255,0.4)] before:absolute before:top-0 before:left-[-100%] before:h-full before:w-full before:bg-white/30 before:opacity-0 before:transition-all before:duration-300 before:ease-out hover:before:left-full">
+                <button className="relative  overflow-hidden bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black font-bold py-3 px-6 rounded-full transition-all duration-200 ease-out hover:shadow-[0_0_25px_12px_rgba(255,255,255,0.4)] before:absolute before:top-0 before:left-[-100%] before:h-full before:w-full before:bg-white/30 before:opacity-0 before:transition-all before:duration-300 before:ease-out hover:before:left-full">
                   Get Started
                 </button>
               </div>

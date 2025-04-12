@@ -54,13 +54,13 @@ const AiBAMSContactPage = () => {
   return (
     <>
       <div className="aibams-main">
-        <div className="contact-container">
+        <div className="contact-container flex flex-column p-10">
           <div 
-            className="contact-form-section p-5 isolate aspect-video w-96 rounded-xl bg-[#ffffff0c] shadow-lg ring-1 ring-black/5 relative "
+            className="contact-form-section p-5 isolate aspect-video w-60 rounded-xl bg-[#ffffff0c] shadow-lg ring-1 ring-black/5 relative md:w-full sm:w-full xs:w-full"
             data-aos="fade-up"
           >
             <NoiseTexture />
-            <h2 className="section-title relative z-10">Looking for something?</h2>
+            <h2 className="relative z-10 sm:text-md md:text-md lg:text-lg">Looking for something?</h2>
 
             <form onSubmit={handleSubmit} className="contact-form relative z-10">
               <div className="form-row" data-aos="fade-up" data-aos-delay="100">
@@ -185,7 +185,7 @@ const AiBAMSContactPage = () => {
           </div>
 
           <div 
-            className="direct-contacts-section mt-8"
+            className="direct-contacts-section"
             data-aos="fade-up"
             data-aos-delay="700"
           >
@@ -239,7 +239,7 @@ const AiBAMSContactPage = () => {
           </div>
         </div>
       </div>
-      <div className="office-locations flex justify-center gap-70 bg-black h-100 items-center">
+      <div className="flex flex-wrap justify-center gap-15 bg-black items-center sm:mb-30 sm:mt-10">
         <div 
           className="flex flex-col justify-center items-center py-8 px-6 border border-gray-800 rounded-md"
           data-aos="fade-up"

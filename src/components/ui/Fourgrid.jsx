@@ -124,10 +124,10 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
         <div className="relative z-10 flex flex-col h-full">
           <div className={`title-container ${index === 1 ? 'mb-4 w-3/4' : index === 0 ? 'mb-8' : 'mb-2'} ${index === 2 ? 'w-1/2' : ''}`}>
             <h3 className={`
-              ${index === 0 ? 'text-[55px] font-semibold leading-none mb-6' : ''}
-              ${index === 1 ? 'text-[50px] font-semibold -mt-2 leading-tight' : ''}
-              ${index === 2 ? 'text-7xl font-normal leading-none' : ''}
-              ${index === 3 ? 'text-4xl font-light leading-none' : ''}
+              ${index === 0 ? 'sm:text-3xl md:text-4xl lg:text-4xl font-semibold leading-none mt-2' : ''}
+              ${index === 1 ? 'sm:text-3xl md:text-4xl lg:text-4xl font-semibold mt-2 leading-tight' : ''}
+              ${index === 2 ? 'sm:text-3xl lg:text-4xl font-normal leading-none' : ''}
+              ${index === 3 ? 'sm:text-3xl lg:text-4xl font-light leading-none' : ''}
             `}>
               {title}
             </h3>
@@ -140,19 +140,19 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
             ${index === 3 ? 'text-center w-full mt-[20px] ' : ''}
           `}>
             <p className={`
-              ${index === 0 ? 'text-3xl font-light mb-4' : ''}
-              ${index === 1 ? 'text-2xl font-light mb-2' : ''}
-              ${index === 2 ? 'text-5xl font-light  mt-[-20px]' : ''}
-              ${index === 3 ? 'text-8xl font-bold' : ''}
+              ${index === 0 ? 'sm:text-xl md:text-2xl lg:text-3xl font-light mb-4' : ''}
+              ${index === 1 ? 'sm:text-lg md:text-xl lg:text-2xl font-light mb-2' : ''}
+              ${index === 2 ? 'sm:text-3xl md:text-4xl lg:text-5xl font-light  mt-[-20px]' : ''}
+              ${index === 3 ? 'sm:text-6xl md:text-7xl lg:text-8xl font-bold' : ''}
             `}>
               {description}
             </p>
             {subDescription && (
               <p className={`
                 ${index === 0 ? 'text-xl text-gray-400 leading-relaxed w-full' : ''}
-                ${index === 1 ? 'text-lg text-gray-400 leading-relaxed w-3/4' : ''}
+                ${index === 1 ? 'text-lg text-gray-400 leading-relaxed w-full sm:w-3/4' : ''}
                 ${index === 2 ? 'text-xl text-gray-400 leading-relaxed w-full mt-6 ' : ''}
-                ${index === 3 ? 'text-4xl font-light mt-2  ' : ''}
+                ${index === 3 ? 'text-4xl font-light mt-2 text-center ' : ''}
               `}>
                 {subDescription}
               </p>
@@ -210,10 +210,10 @@ const FourGrid = () => {
   const y = useTransform(scrollYProgress, [0, 0.6], [-200, 0]);
 
   return (
-    <div className="container mx-auto py-12 px-4" style={{ minHeight: "100vh", position: "relative" }}>
+    <div className="container mx-auto py-12 px-4 md:px-8" style={{ minHeight: "100vh", position: "relative" }}>
       <motion.div
         ref={gridRef}
-        className="grid grid-cols-4 gap-4 w-full mx-auto h-[650px]"
+        className="grid grid-cols-4 gap-6 md:gap-8 w-full mx-auto h-[650px]"
         style={{ 
           scale,
           transform: `translate(0%, ${scrollYProgress * 5}%) translate3d(0px, ${y}px, 0px)`,

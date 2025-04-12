@@ -6,17 +6,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // CustomButton Component (from your previous snippet)
+
 const CustomButton = ({ text = "Subscribe", onClick, className = "" }) => {
   return (
     <button
-      className={`relative px-8 py-3 bg-black !text-white font-semibold rounded-lg border-2 border-[#ffd302] 
-                 hover:border-[#ffd302] transition-all duration-300 active:scale-95 active:shadow-[0_0_15px_7px_rgba(255,211,2,0.7)]  group ${className}`}
+      className={`relative px-6 py-3 bg-black rounded-md font-semibold 
+             transform transition-transform duration-500 
+             hover:scale-105 hover:shadow-lg 
+               group ${className}`}
       onClick={onClick}
     >
       <span className="flex items-center space-x-2">
         <span>{text}</span>
         <svg
-          className="w-6 h-6 transition-transform duration-500 hover:translate-x-1"
+          className="w-6 h-6 transition-transform duration-500 hover:translate-x-1 "
           aria-hidden="true"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,10 +32,10 @@ const CustomButton = ({ text = "Subscribe", onClick, className = "" }) => {
           />
         </svg>
       </span>
-      <span
+      {/* <span
         className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 
                    bg-gradient-to-r from-yellow-500/20 to-yellow-500/20"
-      ></span>
+      ></span> */}
     </button>
   );
 };
@@ -157,25 +160,25 @@ const Pricing = () => {
   return (
     <div className="pricing-container">
       <div className="max-w-6xl mx-auto -my-15 text-center">
-        <h2 className="text-[80px] font-bold" data-aos="fade-up">
+        <h1 className="sm:text-xl md:text-xl lg:text-2xl font-semibold" data-aos="fade-up">
           Launch your creative business.
-        </h2>
-        <p
-          className="!text-[22px] text-white mt-10"
+        </h1>
+        <h3
+          className="sm:text-xl md:text-xl lg:text-2xl text-white mt-10"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           Publishing, newsletters, members, payments — all in one place.
-        </p>
+        </h3>
         <div className="mt-10" data-aos="fade-up" data-aos-delay="200">
-          <div className="flex justify-center mt-6 space-x-2 gap-5">
+          <div className="flex flex-wrap justify-center mt-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
             <CustomButton
               text="Monthly billing"
               onClick={() => setBillingCycle("monthly")}
               className={`${
                 billingCycle === "monthly"
-                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-white"
-                  : "bg-gray-200 hover:bg-gray-300 text-black"
+                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black"
+                  : "hover:scale-105 duration-300"
               }`}
             />
             <CustomButton
@@ -183,22 +186,22 @@ const Pricing = () => {
               onClick={() => setBillingCycle("yearly")}
               className={`${
                 billingCycle === "yearly"
-                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-white"
-                  : "bg-gray-200 hover:bg-gray-300 text-black"
+                  ? "bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black"
+                  : "hover:scale-105 duration-300"
               }`}
             />
           </div>
         </div>
 
         <div
-          className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-40"
+          className="grid grid-wrap sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-20"
           data-aos="fade-up"
           data-aos-delay="300"
         >
           {pricingPlans.map((plan) => (
             <div
               key={plan.name}
-              className="!border-0 rounded-lg p-6 shadow-md text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden bg-white"
+              className="!border-0 rounded-lg p-3 shadow-md text-left transition-all duration-300 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden bg-white"
               data-aos="zoom-in"
               data-aos-delay={pricingPlans.indexOf(plan) * 100}
             >
@@ -213,18 +216,18 @@ const Pricing = () => {
                 ${plan.price[billingCycle]}{" "}
                 <span className="text-gray-500 text-lg">/ mo</span>
               </p>
-              <div className="mt-2 items-center ml-5 ">
-              <ButtonHero size="small">
-                
-              </ButtonHero>
-
+              <div className="mt-2 items-center ml-5">
+                <ButtonHero size="small"></ButtonHero>
               </div>
-              
             </div>
           ))}
         </div>
 
-        <div className="mt-12 overflow-x-auto rounded-2xl" data-aos="fade-up" data-aos-delay="400">
+        <div
+          className="mt-12 overflow-x-auto rounded-2xl"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <table className="w-full text-left bg-gray-700 rounded-2xl">
             <thead>
               <tr>

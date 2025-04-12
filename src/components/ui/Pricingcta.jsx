@@ -69,17 +69,17 @@ const InteractiveFooterCTA = () => {
             data-aos-delay="100"
           >
             <h2 
-              className="text-[55px] md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600"
+              className="sm:text-xl md:text-xl lg:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600"
             >
               Ready to launch into the future?
             </h2>
-            <p className="text-blue-100 text-2xl text-center">
+            <p className="text-blue-100 sm:text-xl md:text-xl lg:text-2xl text-center">
               Join thousands of forward-thinking companies who've already <br /> upgraded their operations with our cutting-edge solutions.
             </p>
           </div>
           
           <div 
-            className="md:w-1/2 w-full max-w-md mt-10 -mb-10"
+            className="xs:w-1 md:w-1/2 w-full max-w-md mt-10 -mb-10"
             data-aos="fade-left"
             data-aos-delay="200"
           >
