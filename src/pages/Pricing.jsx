@@ -254,7 +254,7 @@ const Pricing = () => {
               ].map((feature) => (
                 <tr
                   key={feature}
-                  className="hover:bg-[#faf1439a] transition-colors duration-150"
+                  className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150"
                 >
                   <td className="p-4 capitalize">
                     {feature.replace(/([A-Z])/g, " $1")}
@@ -282,7 +282,7 @@ const Pricing = () => {
                 {platformFeatures.map((feature) => (
                   <tr
                     key={feature}
-                    className="hover:bg-[#faf1439a] transition-colors duration-150"
+                    className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150"
                   >
                     <td className="p-4 font-extralight w-1/5">{feature}</td>
                     {pricingPlans.map((plan) => (
@@ -295,7 +295,7 @@ const Pricing = () => {
                     ))}
                   </tr>
                 ))}
-                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
+                <tr className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150">
                   <td className="p-4">Custom SSL certificate</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -314,7 +314,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
+                <tr className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150">
                   <td className="p-4">Custom subdirectory install</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -343,7 +343,7 @@ const Pricing = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse table-fixed">
               <tbody>
-                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
+                <tr className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150">
                   <td className="p-4 w-1/5">Product help</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -354,7 +354,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
+                <tr className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150">
                   <td className="p-4">Concierge migration</td>
                   {pricingPlans.map((plan) => (
                     <td
@@ -373,7 +373,7 @@ const Pricing = () => {
                     </td>
                   ))}
                 </tr>
-                <tr className="hover:bg-[#faf1439a] transition-colors duration-150">
+                <tr className="hover:bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black transition-colors duration-150">
                   <td className="p-4">Uptime SLA</td>
                   {pricingPlans.map((plan) => (
                     <td

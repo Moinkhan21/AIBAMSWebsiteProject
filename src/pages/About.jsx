@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import defaultImage from "../assets/7fd6a598-ccc0-4e8b-93ff-48828d0016f6-removebg-preview.png"; // Ensure correct import
 
 const teamMembers = [
-  { name: "Nandan Pathak", role: "Full-Stack Developer" },
+  
   { name: "Shiv Gadway", role: "Full-Stack Developer" },
   { name: "Vyonish Momaya", role: "Sales & Marketing" },
   { name: "Himnish Parmar", role: "Tech Lead" },
@@ -34,11 +34,11 @@ const AboutPage = () => {
         </p>
 
         {/* Grid for Team Members */}
-        <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
-          {teamMembers.slice(0, 4).map((member, index) => (
+        <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+          {teamMembers.slice(0, 3).map((member, index) => (
             <motion.div
               key={index}
-              className="bg-[#45454521] p-6 shadow-lg rounded-lg text-center"
+              className="bg-[#45454521] p-6 shadow-lg rounded-lg text-center w-64 border-2 border-gray-800"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -56,8 +56,8 @@ const AboutPage = () => {
         </div>
 
         {/* Last Two Members Centered */}
-        <div className="flex justify-center gap-8 mt-8">
-          {teamMembers.slice(4).map((member, index) => (
+        <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8">
+          {teamMembers.slice(3).map((member, index) => (
             <motion.div
               key={index}
               className="bg-[#45454521] p-6 shadow-lg rounded-lg text-center w-64 border-2 border-gray-800"

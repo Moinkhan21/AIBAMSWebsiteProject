@@ -177,7 +177,7 @@ const AiBAMSContactPage = () => {
               </div>
 
               <div className="mt-1">
-              <button className="bg-black text-[#fad643] font-bold py-[12px] px-6 rounded-full transition-all duration-200 ease-out hover:border-1 hover:border-white">
+              <button className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black hover:scale-105 font-bold py-[12px] px-6 rounded-full transition-all duration-200 ease-out">
                 Book a Demo
               </button>
             </div>

@@ -27,7 +27,7 @@ const Button = ({ size = 'small' }) => {
 
   return (
     <button
-      className={`group relative flex items-center ${sizeStyles[size]} hover:bg-gradient-to-r hover:from-[#bda114] hover:to-[#bda114] font-semibold hover:text-black transition-all duration-200 ease-in-out hover:scale-[1.02] bg-gradient-to-r from-[#111] to-[#333] focus:outline-none focus:ring-2 focus:ring-[#645bff] focus:ring-offset-2`}
+      className={`group relative flex items-center ${sizeStyles[size]} bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black focus:outline-none focus:ring-2 focus:ring-[#645bff] focus:ring-offset-2`}
     >
       <span className="relative z-10">Learn more</span>
       <div className={`relative flex items-center justify-center ${arrowSizes[size]}`}>

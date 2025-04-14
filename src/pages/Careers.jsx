@@ -86,7 +86,7 @@ const CareersPage = () => {
               </div>
             </div>
 
-            <button type="submit" className="apply-btn mx-auto block">Apply</button>
+            <button type="submit" className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black justify-center">Apply</button>
           </form>
         </section>
       </div>
