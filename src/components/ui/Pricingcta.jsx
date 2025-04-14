@@ -69,7 +69,7 @@ const InteractiveFooterCTA = () => {
             data-aos-delay="100"
           >
             <h2 
-              className="sm:text-xl md:text-xl lg:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600"
+              className="sm:text-xl md:text-xl lg:text-2xl font-semibold bg-clip-text"
             >
               Ready to launch into the future?
             </h2>
@@ -83,12 +83,12 @@ const InteractiveFooterCTA = () => {
             data-aos="fade-left"
             data-aos-delay="200"
           >
-            <div className="bg-black bg-opacity-60 border border-yellow-700 rounded-lg p-6 backdrop-blur-sm relative overflow-hidden">
+            <div className="bg-black bg-opacity-60 border border-yellow-500 rounded-lg p-6 backdrop-blur-sm relative overflow-hidden">
               <NoiseTexture />
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4 relative z-10">
                   <h3 
-                    className="text-yellow-400 font-medium text-2xl text-center"
+                    className="text-yellow-500 font-medium text-2xl text-center"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -105,14 +105,14 @@ const InteractiveFooterCTA = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
-                      className="w-full bg-black border border-yellow-700 rounded-md py-3 px-4 text-white placeholder-yellow-300 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                      className="w-full bg-black border border-yellow-500 rounded-md py-3 px-4 text-white placeholder-yellow-300 placeholder-opacity-50 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                       required
                     />
                   </div>
                   
                   <button
                     type="submit"
-                    className="w-55 !mt-8 m-auto py-3 px-4 bg-[#fad643] hover:bg-yellow-500 text-white font-medium rounded-md transition duration-200 flex items-center justify-center group"
+                    className="w-55 !mt-8 m-auto py-3 px-4 bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black hover:scale-105 duration-300 font-medium rounded-md transition flex items-center justify-center group"
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
                     data-aos="fade-up"
@@ -130,7 +130,7 @@ const InteractiveFooterCTA = () => {
                   </button>
                   
                   <p 
-                    className="text-yellow-300 text-sm my-5 -mb-0.5 text-center"
+                    className="text-yellow-500 text-sm my-5 -mb-0.5 text-center"
                     data-aos="fade-up"
                     data-aos-delay="600"
                   >

@@ -99,11 +99,7 @@ const PuzzleGrid = () => {
   }, [activeItem]);
 
   return (
-    <div className="flex flex-col w-full h-full max-w-5xl mx-auto gap-2 aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-21 lg:aspect-h-9">
-      {/* Grid Heading */}
-      {/* <h2 className="text-center mb-4 text-lg font-semibold text-gray-700">
-        Puzzle Grid Challenge
-      </h2> */}
+    <div className="flex flex-col w-full h-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-5xl  mx-auto mt-7 gap-2 aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-21 lg:aspect-h-9">
 
       {/* Group layout for animations */}
       <LayoutGroup>
@@ -119,10 +115,6 @@ const PuzzleGrid = () => {
         )}
       </LayoutGroup>
 
-      {/* Hint for interaction */}
-      {/* <p className="text-center mt-4 text-gray-600 text-sm">
-        Tap a tile to expand and solve the puzzle visually!
-      </p> */}
     </div>
   );
 };

@@ -15,7 +15,7 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col items-center text-center px-10 py-40">
       {/* About Section */}
-      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-3xl mb-100 ">
+      <div className="sm:max-w-xl md:max-w-2xl lg:max-w-3xl mb-15 ">
         <h1 className="sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-wider">About AIBAMS</h1>
         <p className="sm:text-lg md:text-xl lg:text-2xl text-gray-100 mt-5 tracking-widest">Transforming Ideas into Digital Excellence</p>
         <p className="text-gray-100 mt-10  tracking-widest sm:text-sm md:text-md lg:text-lg">
@@ -56,7 +56,7 @@ const AboutPage = () => {
         </div>
 
         {/* Last Two Members Centered */}
-        <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8">
+        <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-8 justify-center">
           {teamMembers.slice(3).map((member, index) => (
             <motion.div
               key={index}

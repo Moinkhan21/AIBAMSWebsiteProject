@@ -22,8 +22,6 @@ const CareersPage = () => {
 
       {/* Available Positions */}
       <div className="mt-15 text-center w-[80%] ">
-        {/* <h2 className="text-4xl font-bold tracking-wider">Available Positions</h2>
-        <p className="text-gray-500 mt-5 mb-6">Explore our current job openings</p> */}
 
         <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 ml-[20%] max-w-7xl">
           {jobListings.map((job, index) => (
@@ -43,7 +41,6 @@ const CareersPage = () => {
 
       <div className="flex justify-center mt-20">
         {/* Job Application Form Section */}
-        {/* <div className="h-30 w-1500 absolute bg-[#555555] ml-250 pt-180 mt-20 rounded-full"></div> */}
         <section className="job-application-section text-center">
           <h2 className="font-bold sm:text-xl md:text-xl lg:text-2xl">Job Application Form</h2>
           <p className="sm:text-xl md:text-xl lg:text-2xl text-center">Please Fill Out the Form Below to Submit Your Job Application!</p>
@@ -86,7 +83,7 @@ const CareersPage = () => {
               </div>
             </div>
 
-            <button type="submit" className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black justify-center">Apply</button>
+            <button type="submit" className="bg-gradient-to-r from-[#FFD700] via-[#FFC107] to-[#ff9500] text-black">Apply</button>
           </form>
         </section>
       </div>

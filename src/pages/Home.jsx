@@ -110,7 +110,7 @@ const Hero = forwardRef((props, ref) => {
             </div>
           </motion.section>
 
-          <div className="mt-60">
+          <div className="mt-10">
             <motion.div
               className="relative z-10"
               initial={{ opacity: 0 }}
@@ -123,7 +123,7 @@ const Hero = forwardRef((props, ref) => {
           </div>
 
           <PuzzleGrid />
-          <section className="relative z-10 product mt-25">
+          <section className="relative z-10 product mt-10">
             <motion.div
               className="product-title text-2xl text-center"
               initial={{ opacity: 0, y: 20 }}

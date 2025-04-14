@@ -115,19 +115,19 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
       </div>
 
       <motion.div
-        className="bg-[#191919] p-8 relative h-full w-full text-white cursor-pointer overflow-hidden backdrop-blur-none"
+        className="bg-[#191919] p-4 relative h-full w-full text-white cursor-pointer overflow-hidden backdrop-blur-none"
         initial={{ scale: 1, backdropFilter: blurIntensity.initial, backgroundColor: "rgba(33, 33, 33, 0.99)", borderRadius: "40px", boxShadow: "0 0 0 rgba(0, 0, 255, 0)" }}
         whileHover={{ borderRadius: "40px", scale: 1, backdropFilter: blurIntensity.hover, backgroundColor: "rgba(33, 33, 33, 0.5)", boxShadow: "0 8px 32px rgba(0, 0, 255, 0.2)" }}
         transition={{ duration: 0.3, ease: "easeOut", backdropFilter: { duration: 0.4, ease: "easeInOut" }, backgroundColor: { duration: 0.4, ease: "easeInOut" }, boxShadow: { duration: 0.4, ease: "easeInOut" } }}
       >
         <NoiseTexture />
-        <div className="relative z-10 flex flex-col h-full">
+        <div className="relative z-10 flex flex-col h-full mr-1">
           <div className={`title-container ${index === 1 ? 'mb-4 w-3/4' : index === 0 ? 'mb-8' : 'mb-2'} ${index === 2 ? 'w-1/2' : ''}`}>
             <h3 className={`
-              ${index === 0 ? 'sm:text-3xl md:text-4xl lg:text-4xl font-semibold leading-none mt-2' : ''}
-              ${index === 1 ? 'sm:text-3xl md:text-4xl lg:text-4xl font-semibold mt-2 leading-tight' : ''}
-              ${index === 2 ? 'sm:text-3xl lg:text-4xl font-normal leading-none' : ''}
-              ${index === 3 ? 'sm:text-3xl lg:text-4xl font-light leading-none' : ''}
+              ${index === 0 ? 'xs:text-2xl sm:text-4xl md:text-4xl lg:text-4xl font-semibold mt-5' : ''}
+              ${index === 1 ? 'sm:text-3xl md:text-4xl lg:text-4xl font-semibold leading-tight mt-5' : ''}
+              ${index === 2 ? 'sm:text-3xl lg:text-4xl font-semibold leading-none mt-5' : ''}
+              ${index === 3 ? 'sm:text-3xl lg:text-4xl font-light leading-none mt-5' : ''}
             `}>
               {title}
             </h3>
@@ -136,13 +136,13 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
           <div className={`description-container 
             ${index === 0 ? 'w-full mt-0' : ''} 
             ${index === 1 ? 'w-3/4 mt-2' : ''} 
-            ${index === 2 ? 'w-1/2 mt-5' : ''} 
+            ${index === 2 ? 'w-3/4 mt-5' : ''} 
             ${index === 3 ? 'text-center w-full mt-[20px] ' : ''}
           `}>
             <p className={`
-              ${index === 0 ? 'sm:text-xl md:text-2xl lg:text-3xl font-light mb-4' : ''}
+              ${index === 0 ? 'sm:text-lg md:text-xl lg:text-2xl font-light mb-4' : ''}
               ${index === 1 ? 'sm:text-lg md:text-xl lg:text-2xl font-light mb-2' : ''}
-              ${index === 2 ? 'sm:text-3xl md:text-4xl lg:text-5xl font-light  mt-[-20px]' : ''}
+              ${index === 2 ? 'sm:text-3xl md:text-4xl lg:text-5xl font-light ' : ''}
               ${index === 3 ? 'sm:text-6xl md:text-7xl lg:text-8xl font-bold' : ''}
             `}>
               {description}
@@ -150,9 +150,9 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
             {subDescription && (
               <p className={`
                 ${index === 0 ? 'text-xl text-gray-400 leading-relaxed w-full' : ''}
-                ${index === 1 ? 'text-lg text-gray-400 leading-relaxed w-full sm:w-3/4' : ''}
-                ${index === 2 ? 'text-xl text-gray-400 leading-relaxed w-full mt-6 ' : ''}
-                ${index === 3 ? 'text-4xl font-light mt-2 text-center ' : ''}
+                ${index === 1 ? 'sm:text-xl lg:text-2xl xl:text-2xl text-gray-400 leading-relaxed w-full sm:w-3/4' : ''}
+                ${index === 2 ? 'sm:text-xl lg:text-2xl xl:text-2xl text-gray-400 leading-relaxed w-full mt-6 ' : ''}
+                ${index === 3 ? 'xs:text-2xl sm:text-2xl lg:text-3xl font-light mt-2 text-center ' : ''}
               `}>
                 {subDescription}
               </p>
@@ -164,35 +164,6 @@ const GridItem = ({ title, description, subDescription, icon, className, index, 
             )}
           </div>
           
-          {/* {icon && (
-            <div className="icon-container  ">
-              <div className="  flex gap-8 justify-end items-end">
-                {icon.map((item, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="bg-[#e8e8e8] px-2 py-3  rounded-xl text-black text-lg font-medium ">
-                      {item}
-                    </div>
-                    {subText && (
-                      <div className="text-sm text-gray-400">
-                        {subText[idx]}
-                      </div>
-                    )}
-                    {subText2 && (
-                      <div className="text-sm text-gray-400">
-                        {subText2[idx]}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )} */}
-          
-          {/* {hoverComponent && index === 1 && (
-            <div className="hover-component-container absolute inset-0 z-20 mt-40 ml-160">
-              {hoverComponent}
-            </div>
-          )} */}
         </div>
       </motion.div>
     </div>
@@ -210,7 +181,7 @@ const FourGrid = () => {
   const y = useTransform(scrollYProgress, [0, 0.6], [-200, 0]);
 
   return (
-    <div className="container mx-auto py-12 px-4 md:px-8" style={{ minHeight: "100vh", position: "relative" }}>
+    <div className="container mx-auto py-5 px-4 md:px-4" style={{ minHeight: "35vh", position: "relative" }}>
       <motion.div
         ref={gridRef}
         className="grid grid-cols-4 gap-6 md:gap-8 w-full mx-auto h-[650px]"

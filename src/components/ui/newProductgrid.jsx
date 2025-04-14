@@ -11,7 +11,7 @@ import { PiAirplayFill } from "react-icons/pi";
 import { RiBowlLine } from "react-icons/ri";
 import '@flaticon/flaticon-uicons/css/all/all.css';
 
-//import img1 from "../../assets/increase.png";
+import img1 from "../../assets/increase.png";
 
 const NoiseTexture = () => (
   <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" style={{ filter: 'contrast(170%) brightness(1000%)' }}>
@@ -60,7 +60,6 @@ const IntegrationsSection = () => {
   }, []);
 
   return (
-    <>
     <div ref={sectionRef} className="relative w-full py-16 bg-transparent" style={{ minHeight: '100vh' }}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="absolute text-center mt-55 z-20 mx-57 my-50">
@@ -75,12 +74,11 @@ const IntegrationsSection = () => {
         </div>
 
         <div className="relative w-full h-full mx-auto" style={{ maxWidth: "1500px" }}>
-          <div className="relative inset-0 grid gap-6 lg:grid-cols-12 lg:gap-6">
+          <div className="relative inset-0 grid grid-cols-12 gap-6">
             {Array(72).fill(0).map((_, i) => (
               <div key={i} className="bg-[#2b2b2b4f] rounded-xl w-20 h-20"></div>
             ))}
           </div>
-
           
           <div className="absolute left-1/4 translate-x-2 top-1">
             <div className="icon-container adp-icon w-20 h-20 bg-[#141414] rounded-xl shadow-lg flex items-center justify-center overflow-hidden relative">
@@ -196,10 +194,8 @@ const IntegrationsSection = () => {
         </div>
       </div>
     </div>
-    
-    </>
-    
   );
 };
 
 export default IntegrationsSection;
+

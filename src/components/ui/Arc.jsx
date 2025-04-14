@@ -41,7 +41,7 @@ export default function PlatformArc() {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center bg-transparent text-center p-6 mt-50 aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-21 lg:aspect-h-9">
+    <div className="relative flex flex-col items-center justify-center bg-transparent text-center p-6 mt-5 aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3 md:aspect-w-16 md:aspect-h-9 lg:aspect-w-21 lg:aspect-h-9 sm:mt-10 md:mt-20 lg:mt-32 xl:mt-40 2xl:mt-52">
       {/* Animated Background */}
       <div className="circles  mt-[250px]  self-center inset-0 flex items-center justify-center " data-aos="fade-in" style={{
         left: "50%",
